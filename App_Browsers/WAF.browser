@@ -1,0 +1,19 @@
+<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlHead" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlTitle" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlGenericControl" adapterType="WAF.Presentation.Web.WAFControlAdapter" /> <!--Needed for modifying body tag--> 
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlMeta" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlForm" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlLink" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlImage" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.WebControls.Button" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.WebControls.LinkButton" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.WebControls.ImageButton" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.WebControls.HyperLink" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.WebControls.Image" adapterType="WAF.Presentation.Web.WAFControlAdapter" />
+      <adapter controlType="System.Web.UI.Page" adapterType="WAF.Presentation.Web.WAFPageAdapter" />
+    </controlAdapters>
+  </browser>
+</browsers>

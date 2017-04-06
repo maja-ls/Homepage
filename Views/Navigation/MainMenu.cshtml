@@ -1,0 +1,18 @@
+﻿@model Homepage.ViewModels.NavigationViewModel
+@{
+    Layout = null;
+}
+
+<div class="navItems">
+    <div class="logoContainer">
+        <img src="@Html.Raw(Model.Logo)" />
+    </div>
+
+    <div class="linksContainer">
+        @foreach (var item in Model.Links) {
+            <div>
+                <span>&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a href="@item.Link"><span class="fa @item.FontAwesomeString">&nbsp;</span>@item.Title</a></span>
+            </div>
+        }
+    </div>
+</div>

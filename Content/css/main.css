@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+section#page {
+    font-family: 'Cabin','Arimo', Verdana, sans-serif;
+    background: url(images/bg.jpg) no-repeat center center fixed;
+}
+
+
+
+nav {
+    height: 70px;
+    transition: background-color 0.8s ease;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.navItems {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logoContainer {
+    margin-left: 30px;
+}
+
+.logoContainer img {
+    height: 100%;
+}
+
+.linksContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+h1 {
+    color: aqua;
+}

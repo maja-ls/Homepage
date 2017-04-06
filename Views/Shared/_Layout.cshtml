@@ -1,0 +1,61 @@
+﻿@{
+    var cp = PageElements.GetControlPanel();
+
+    string bgPosition;
+    string backgroundUrl = PageElements.GetBackgroundImage(Model, cp, out bgPosition);
+    string backgroundColor = PageElements.GetBackgroundColor(Model, cp);
+    string navBg = PageElements.GetNavBgColor(Model, cp);
+    string navColor = PageElements.GetNavTextColor(Model, cp);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sæterstøen.no - @Model.Name</title>
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Cabin" rel="stylesheet">
+    <link rel="stylesheet" href="@Url.Content("~/Content/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/main.css")" id="theme" />
+    <style>
+        html {
+            @Html.Raw((!string.IsNullOrWhiteSpace(backgroundUrl)? "background: url('"+backgroundUrl+ "') no-repeat "+ bgPosition.ToLower() + " center fixed;" : ""))
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        }
+
+        nav {
+            color: @navColor;
+        }
+        nav:hover{
+            background-color: @navBg;
+        }
+        nav a {
+            color: @navColor;
+        }
+    </style>
+</head>
+<body>
+    <section id="page">
+        <nav>
+            @{
+                @Html.Action("MainMenu", "Navigation")
+            }
+        </nav>
+        <section id="content">
+            @RenderBody()
+        </section>
+
+
+
+    </section>
+    <script src="@Url.Content("~/dist/scripts/main.js")" type="text/javascript"></script>
+    @*
+        Change to this in prod
+        <script src="@Url.Content("~/dist/scripts/main.min.js")" type="text/javascript"></script>
+    *@
+
+</body>
+</html>

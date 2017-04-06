@@ -1,0 +1,62 @@
+
+// WAF Custom. Add your own code here to customize the default behavior.
+using System;
+using WAF.Common;
+using WAF.Definition;
+using WAF.Engine;
+using WAF.Engine.Content.Native;
+using WAF.Engine.Query;
+using WAF.Engine.Query.Advanced;
+using WAF.Engine.Property;
+using WAF.Data;
+using WAF.Data.Query;
+using WAF.Data.Query.Homepage.Recipes;
+using WAF.Data.Content;
+using WAF.Data.DataValue;
+
+namespace WAF.Engine.Content.Homepage.Recipes {
+
+    public partial class IngredientRecipe {
+
+        public override void OnInit() {
+
+            base.OnInit();
+        }
+
+        public override void OnNew() {
+
+            base.OnNew();
+        }
+
+        public override void OnBeforeInsert() {
+
+            base.OnBeforeInsert();
+        }
+
+        public override void OnBeforeUpdate() {
+
+            var n = "";
+            if (this.Recipe.IsSet()) n += this.Recipe.Get().Name + " - ";
+            if (this.Ingredient.IsSet()) n += this.Ingredient.Get().Name;
+            this.Name = n;
+            base.OnBeforeUpdate();
+        }
+
+        public override void OnAfterInsert() {
+
+            base.OnAfterInsert();
+        }
+
+        public override void OnAfterUpdate() {
+
+            base.OnAfterUpdate();
+        }
+
+        public override void OnAfterDelete( bool permanently ) {
+
+            base.OnAfterDelete(permanently);
+        }
+
+    }
+}
+

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition Name="Website" Build="12" Guid="6999d445-e4f6-4f36-b81c-a9c9df0a1558">
+  <Cultures>
+    <Culture LCID="1033" Name="English" />
+    <Culture LCID="1044" Name="Norsk" />
+  </Cultures>
+  <ContentClasses>
+    <ContentClass Guid="11531980-2259-4b3c-b60d-797c08f0427d" ClassName="Ingredient" Namespace="Homepage.Recipes" TableName="ingredient">
+      <Properties>
+        <Property Guid="2d48a452-635a-43c1-9550-ef05e87385c9" CodeName="IngredientRecipe" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="a03cfdc7-5015-4afa-87ba-25537c22d609" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVChTY/z//z8DCDCBiLbTLf9RRUAALgIDcBkYIKwCLLDt7tb/pt06V0FsDC0YAugAxcw512f83/Ng93/LeUYNUCFUEyxnGDT8evcr9Medr65X5z18BhIjaAVpbsAGiFfguNu64fDjQ/+nnZ2MYidcwb9vf0NPvjrJwMHCARWBALgjreYbSf358Hv3jyffV1/qvYM9HLABgo4kaAIhQNAGQgCrC4BBJgWk0v7//R/K8Oc/w79f/1b///lv1uHI0+D4RQZYDXDYbnW1Ubtd6+rHqwxffn1mkOaQYph8oOfaieyL2lAlcIDVC38+/l599dVFBj4mHgYhFkGGN+9eMfx49H01VBoFDHwgUmgAAwMAagmMVQDMwBAAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="8ae6c601-b29a-4569-8a00-f994f20abe43" ClassName="Recipe" Namespace="Homepage.Recipes" TableName="recipe">
+      <Properties>
+        <Property Guid="34ae021b-6146-4468-818a-23b363e81e1a" CodeName="Description" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="a695e9f4-12d2-4b3c-9a97-c2fc8b1c8aa2" Key="Value" Name="description" />
+          </DataValues>
+        </Property>
+        <Property Guid="97574784-a08f-4919-8439-ec28756becaa" CodeName="Procedure" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="d9482544-f359-4ab9-9be5-e4355fdc4aaf" Key="Value" Name="procedure" />
+          </DataValues>
+        </Property>
+        <Property Guid="2192b88b-d832-4123-98fe-266f8cbb344c" CodeName="Portions" PropertyClassGuid="3de57d0c-f738-423c-8acc-ba5510349cad">
+          <DataValues>
+            <Integer Guid="a0adc7f6-7dcd-4eb1-8bc1-b47585d5c600" Key="Value" Name="portions" />
+          </DataValues>
+        </Property>
+        <Property Guid="6c0d1530-4fb2-47a4-8145-7660eafd8e90" CodeName="CookingTime" PropertyClassGuid="3de57d0c-f738-423c-8acc-ba5510349cad">
+          <DataValues>
+            <Integer Guid="1f3d459a-77ef-4b77-8ec4-72c36cf86358" Key="Value" Name="cooking_time" />
+          </DataValues>
+        </Property>
+        <Property Guid="96170f8a-d010-40a1-a117-57a678b91b8e" CodeName="EMRating" PropertyClassGuid="3de57d0c-f738-423c-8acc-ba5510349cad">
+          <DataValues>
+            <Integer Guid="5d92be3a-b14a-4ee4-aa4b-6619de3b90d7" Key="Value" Name="e_m_rating" />
+          </DataValues>
+          <Settings>
+            <Int Key="MaxValue" Value="10" />
+          </Settings>
+        </Property>
+        <Property Guid="168e2867-5369-472e-802b-bc01377c46e6" CodeName="MRating" PropertyClassGuid="3de57d0c-f738-423c-8acc-ba5510349cad">
+          <DataValues>
+            <Integer Guid="75327840-8fe4-4349-945b-70c373a40034" Key="Value" Name="m_rating" />
+          </DataValues>
+          <Settings>
+            <Int Key="MaxValue" Value="10" />
+          </Settings>
+        </Property>
+        <Property Guid="f31912a1-2ce1-4238-9d0f-8c25ef70fa7d" CodeName="OriginalRecipeLink" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="240440f7-5398-4801-8b9f-5146bdef7d4a" Key="Value" Name="original_recipe_link" />
+          </DataValues>
+        </Property>
+        <Property Guid="5a2ba2bb-e8c3-48ef-a791-206c43ef9aea" CodeName="RecipeImage" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="f8f64029-c5d5-461e-ae79-138a09023389" Key="Filename" Name="recipe_image_filename" />
+            <ShortString Guid="f4dc4650-b60d-4f79-ad65-f9cf8ba76491" Key="Type" Name="recipe_image_type_name" />
+            <ShortString Guid="63c3ee21-83ed-4e56-a72e-3ebb862d2456" Key="Extension" Name="recipe_image_extension" />
+            <Float Guid="ee14264b-147d-45de-a8ea-e8370d1dbd2d" Key="Bytes" Name="recipe_image_bytes" />
+            <LongString Guid="5d605d76-19b2-4ba6-8e8f-021331fd7a1c" Key="Info" Name="recipe_image_info" />
+            <Integer Guid="69b9fcd5-a161-443c-a9b9-43042a3b4a32" Key="Reference" Name="recipe_image_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="df4ece5d-74ad-479e-a1f9-6f34f3477aae" CodeName="Pictures" PropertyClassGuid="db1239e2-c255-499f-9038-1ca8e460901e" />
+        <Property Guid="ae073dad-90e1-4b93-9276-1d24a2fc033b" CodeName="Categories" PropertyClassGuid="9e798df1-93a2-49f9-86c8-13e5bf5220f5">
+          <Settings>
+            <RelationReference Key="Relation" Value="0bcfc86c-c827-4415-9ab6-dfeed2592540" />
+          </Settings>
+        </Property>
+        <Property Guid="faf53eee-1098-408f-b53f-558cbbc49567" CodeName="IngredientRecipe" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="e812c82d-537e-487e-8597-a1b9349b8cfd" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE9SURBVChTY/z//z8DGIAYXl5e/1FFdHV1kUSggAlKwwGmisVH3qOIMD1//5MhMjLyv62tLUSiePFjoK7/YFvA2kHEosPvUASRMdjWHz//gnVjAxiuQAdgE0qWPMGpirAJ6P5CB2ArFh/CrYjp95//DNsufFCF8jEAY1DXHZW1pcp34uPjsz9//jzl06dPDB8/fmQA0Tdv3mQkzps2+ZdVwDwsgAkUBswsTClQPiYAWZEz/7EKvvjAh+FuBIVXrI0gI4hdUVGRDaSm/P37l+HPnz8Mv3//Zvj16xeY/vnzJ5i9Zs0asFqCniQE4Gk0rO++St/WVySbBjagfcOL/zry7Lfff/sDFiQFgA34+P0Pw5ef/xi+AzGpAB4GoLi0MBW83RMjw2hsbJwNDKwpsAAD0cgBCQpYIKZGIDIwAABqUQThHtngugAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>61f74ef7-9ce5-45b0-8cc9-b5ba42298e64</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="41a9c903-ad97-4cd4-94d3-3ca2906bf268" ClassName="IngredientRecipe" Namespace="Homepage.Recipes" TableName="ingredient_recipe">
+      <Properties>
+        <Property Guid="30b565d4-f99c-491e-8cdc-7cdf0a5e8d75" CodeName="Ingredient" PropertyClassGuid="cad63455-302a-4474-a412-b99ab05d9aa4">
+          <Settings>
+            <RelationReference Key="Relation" Value="a03cfdc7-5015-4afa-87ba-25537c22d609" />
+          </Settings>
+        </Property>
+        <Property Guid="1bc5bc96-05f3-4f80-9a37-9db2fa4af7b3" CodeName="Recipe" PropertyClassGuid="cad63455-302a-4474-a412-b99ab05d9aa4">
+          <Settings>
+            <RelationReference Key="Relation" Value="e812c82d-537e-487e-8597-a1b9349b8cfd" />
+          </Settings>
+        </Property>
+        <Property Guid="221d0139-b743-4072-89a0-45f3a77726b0" CodeName="Amount" PropertyClassGuid="3f213560-e0b2-4532-ba37-4b093f7168a5">
+          <DataValues>
+            <Float Guid="aafb2305-ef3d-4aa5-b426-3e6030d0fc0d" Key="Value" Name="amount" />
+          </DataValues>
+        </Property>
+        <Property Guid="ae2b83a8-398d-49c4-a86d-7c897a91df86" CodeName="UnitOfMeasure" PropertyClassGuid="7d08c6fb-28f7-4d30-b407-439e018d2402">
+          <DataValues>
+            <Integer Guid="88695514-b542-4071-919d-2e9757086820" Key="Value" Name="unit_of_measure" />
+          </DataValues>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="c93645d7-40c1-4d1a-84ab-d6be7b523cf5" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVChTY/z//z8DCDCBiLbTLf9RRUAALgIDcBkYIKwCLLDt7tb/pt06V0FsDC0YAugAxcw512f83/Ng93/LeUYNUCFUEyxnGDT8evcr9Medr65X5z18BhIjaAVpbsAGiFfguNu64fDjQ/+nnZ2MYidcwb9vf0NPvjrJwMHCARWBALgjreYbSf358Hv3jyffV1/qvYM9HLABgo4kaAIhQNAGQgCrC4BBJgWk0v7//R/K8Oc/w79f/1b///lv1uHI0+D4RQZYDXDYbnW1Ubtd6+rHqwxffn1mkOaQYph8oOfaieyL2lAlcIDVC38+/l599dVFBj4mHgYhFkGGN+9eMfx49H01VBoFDHwgUmgAAwMAagmMVQDMwBAAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="89fe13b8-e167-40ce-b74a-cf7e674f0e7b" ClassName="FoodCategory" Namespace="Homepage.Recipes" TableName="food_category">
+      <Properties>
+        <Property Guid="eae040df-ca78-492d-b01e-11636310e20e" CodeName="Recipes" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="0bcfc86c-c827-4415-9ab6-dfeed2592540" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVChTdVJLSxtRFP7uOKhpKVbU8RH6GhdSCZhCQNvQRbpw4cKV7vsL+j8Kha67atfiiyqREgw1JqCIadBojImJBjWNKbZUHROTzO25V2caKf3gzNw5j+98c+7B1tYWJ4CJx8cdcMRisWtPrVbjEIhGo3xlZSUnHHaugGmafHp6WsfGxgZfX1+XURnc39/n388qfHl5WToZHYzInRcOxhS48n7ItPn5eSOZTMoMyZHL5bgoFZ3W1tZkwDKlXC5fOp1ONLU58SGh4KvqkQqCwaCUY8taXFw0fD6f420MaFVreNWcxebmpm5TWTY1NWVMTEw8sb5ZPB4XvXFjmsfjKUpKC0KYGId4C7HhcLijnlERSdVq9YqAFHOip6fnhAR2yGoCKxaLvKWlBe/jKlqbGPR7Jh6W9pBKpbSRkZEii0Qi3t7e3vCp2oZQQUUDAx7dNfHA2EUikdBkH/pF79HREd/+UeHvvnF+dlnmCwsLFKIRWGL8fr9XiBRi6SyDtxKEzczMDNUHhTGaFu/v77/R/Bf5fB6FQgGVSkUbHBy8PZs6KGKAArRMUBSF0XJEDcNAZ2cn3G43urq6Tmil+NLSkj2aeogCLhIFhCTqiDOzEZ92Gco1hueaCZ8TyGazODw8BC2HNjw8bCtiq6urL2k7vui67mhvb8f2qYnZAxUdzUBjA90kzeFXGXjWdk2UTqfF1qJUKmmjo6NFe5tCoZCXzoG+vj6HpmlI/jTx+UDB/WYFKt3N7ytSWC3hjbsRmb00MpkMLi4uHtsEFgKBgJcUBVwul6O7uxs7RBQ6VvD6KZDLXBeen5/rY2NjWZH/D4GFubm5IYoFBwYGHCTX6mgXWvgvgYXJyUlBdDw+Pp67cdUB+ANhr+pPU9YePwAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="f57f49ad-2aff-40dc-ac86-84af80518c9d" ClassName="ControlPanel" Namespace="Homepage" TableName="control_panel">
+      <Properties>
+        <Property Guid="68e26076-a0da-4015-8488-165b2b118e35" CodeName="SiteLogo" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="6d9257aa-0d0b-41f9-80dc-4ff02108caed" Key="Filename" Name="site_logo_filename" />
+            <ShortString Guid="343f76b9-bded-403d-a712-8b48486c6c9b" Key="Type" Name="site_logo_type_name" />
+            <ShortString Guid="a6bfcd52-6eac-4445-8db6-029041d32b31" Key="Extension" Name="site_logo_extension" />
+            <Float Guid="187fabf4-ee89-4e5e-b5e1-ebe2e1f0c7d0" Key="Bytes" Name="site_logo_bytes" />
+            <LongString Guid="dd7d4b9b-1443-4d3c-b633-d38cf53d4cad" Key="Info" Name="site_logo_info" />
+            <Integer Guid="c4c8ade3-6f2c-47be-9788-e705639f1a0e" Key="Reference" Name="site_logo_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="2bd67928-2d89-4bc1-a9b7-933c5f4c5885" CodeName="LogoWidth" PropertyClassGuid="3de57d0c-f738-423c-8acc-ba5510349cad">
+          <DataValues>
+            <Integer Guid="4e08eca1-27fb-484e-83a1-e69c4f5e1238" Key="Value" Name="logo_width" />
+          </DataValues>
+        </Property>
+        <Property Guid="e1441191-5389-4e61-9451-1ef8a426e010" CodeName="LogoHeight" PropertyClassGuid="3de57d0c-f738-423c-8acc-ba5510349cad">
+          <DataValues>
+            <Integer Guid="989d5c89-790d-4567-bbd4-547f75c01385" Key="Value" Name="logo_height" />
+          </DataValues>
+        </Property>
+        <Property Guid="96e5fbee-419e-4bb3-b1fb-1c6bcca34e97" CodeName="Frontpage" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="c440bf7e-dc72-4271-af6b-1ebab37c95af" Key="Value" Name="frontpage" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="51a7611d-b9e0-46c2-845e-6fc077692c05" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="ea36d14a-d330-426a-8a3d-6fbb8ce115f4" CodeName="NavbarLinks" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="498c36aa-3a20-4370-9329-406c600164cb" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="e63a135c-059a-41a2-86ef-762f84866f38" CodeName="FoodCategoriesFolder" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="8a9afaff-40a7-4994-9e95-98c82af50b36" Key="Value" Name="food_categories_folder" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="f7b789f6-0fb2-481d-951d-26c8c04e06d2" CodeName="FoodIngredientsFolder" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="4bcf85f0-ca8d-4a18-ae65-de22dc4896f2" Key="Value" Name="food_ingredients_folder" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="5fcd21d2-b5d5-4e12-a676-c65a41267486" CodeName="FoodRecipesFolder" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="3ddc2c40-7ab1-4fe8-8fd6-2c5a788e4d0e" Key="Value" Name="food_recipes_folder" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="fa1ee1d3-5295-4ee4-9f56-5e32098a9968" CodeName="WishlistItemFolder" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="fe576218-b37c-4b6a-a556-524c25cc1162" Key="Value" Name="wishlist_item_folder" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="f50bace3-564e-49f8-834a-8132a81b532a" CodeName="WishlistCategoriesFolder" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="8a881d5a-b10f-495d-b555-aa17218ae79c" Key="Value" Name="wishlist_categories_folder" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <Settings>
+        <Int Key="MinimumInstances" Value="1" />
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANsSURBVChTVVJtSFNhFD7vdU6bzrU2dbqpLR1qYYM+fmQQREkFISEUy4QokepP+KMf0VBoIUFI0J+KxAzNiHAS1MxyNVa6abZMmROjaen8oE3dl965u7u3910ldeDcezlf9znPcxDGGAYGBixgsVh4z6uio4kINeRwOPBW/hEkIuPj44lwOBwGhn58ftMK6rSbIBKJAGjF8PBwLX1TR/39/fHs7GzEsiy0tbU1MhkZGai3t7diR1EQzu1cNSCz2YwzOSfAVxO+bhU3JP4yNjbWsr6+fjwSiYBSqVQ4nc7ctbU1j06nS0KDg4MOklCLxWKpyWSyx2KxxhMH0/u2ybYDhshvFF1dXU1WqxW/f96MedaO2R/VePLuEZIi8OmD+o26Hdz60B387GIhrq6uZiorK0v/K6But9sJJ5aNnagnQI6MjPAEh0qhUMwTgIvRaBTIni9ramrqGMJCA9mVkclk83SL4uJiRUFBgcLlctVS2igzs3K5XOXxeKCvr6+CTDHotIv7FHsvw4f7Fzg0MzODadLr9QIBhlbGG+Kpm/zoh42FBwOxOJOXl5fAQabA4qerOCV1BnGsBF6Nrbbdvvcoiens7NTn5OTA5oAJ+PgURMK5YB5RQTCt5FwCA+2ur68vvaXTuL68M8Ljb9KVFU60taOjI7hR8NeIJqU8z88RDxPKF/Pz8zNpnsjhJeIrSCyd4zhlVVXVxJ+W3xcyOjqqd7vdWKVSuYhmAcJRkLg8EAiA3+8HgUAgJ+IGCdRAeXm5i5wHbm5u1tPeDQQ2m61JIpFco1wSBECbCUOQnJwMarWaDgHB6ifI+GmDpPQyWPVZAUXmzlKeeY1GwywtLUEoFEo0TExMwPT0dIVerzfT4R+Nxw2FJXsaxJLdsOyeBImsEITiLHC+bQdEyHD4fL4sqVSaptVqpfSUhUIh5cNemPriZVlZSZOkqBIic/eBEcaACxfArGUo3vJZ6p3147mk7u7uB0TIdITQMXLMiK4Q8w2BZvNU3q4jZw8xnA3i7CBEw0pYMLthQXwaWt/7IYKFt9rb289scGAwGFqWl5fP7891MicvtcLk0ysw/90GKflaCC2sxENR0WHjdNYTQmYWUeJhT09PHe37T0Zqpw5sYXdtyxbsLVUzSxwffO1MnvRzKS1Go7H1T8k/BvALHfX/oexV3awAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="f5d76663-c64d-4eca-9b33-1d582397bd1d" ClassName="WishlistItem" Namespace="Homepage.Wishlist" TableName="wishlist_item">
+      <Properties>
+        <Property Guid="8fd90a2e-6a36-4d08-9eaf-26931ef8a0a1" CodeName="Category" PropertyClassGuid="cad63455-302a-4474-a412-b99ab05d9aa4">
+          <Settings>
+            <RelationReference Key="Relation" Value="1c5303fb-6824-4bed-aabc-52325b18d5c1" />
+          </Settings>
+        </Property>
+        <Property Guid="be008854-429e-49a3-8970-d15029ff38d3" CodeName="WhoWantsIt" PropertyClassGuid="7d08c6fb-28f7-4d30-b407-439e018d2402">
+          <DataValues>
+            <Integer Guid="bdeed469-e7df-4745-b696-d45463e1416c" Key="Value" Name="who_wants_it" />
+          </DataValues>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="174223b0-5815-463e-8df5-dc11f25b23f9" />
+          </Settings>
+        </Property>
+        <Property Guid="46b4a203-3143-46c1-9c25-c415cab12744" CodeName="Description" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="d4e87190-70b5-4beb-b2e6-ea257287cbd4" Key="Value" Name="description" />
+          </DataValues>
+        </Property>
+        <Property Guid="7868065a-da62-4cab-8972-fa6e30ef55d8" CodeName="LinkToProduct" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="b55e7b94-0958-457c-97f7-623853554483" Key="Value" Name="link_to_product" />
+          </DataValues>
+        </Property>
+        <Property Guid="85aa2718-f11e-4e3e-a0f3-7c4a361eabce" CodeName="PriceRange" PropertyClassGuid="7d08c6fb-28f7-4d30-b407-439e018d2402">
+          <DataValues>
+            <Integer Guid="0c2006d7-e9a8-4653-8720-e621d1a318d9" Key="Value" Name="price_range" />
+          </DataValues>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="b104483f-a32c-44a3-8391-e8537b3cabac" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKhSURBVChTdVJZaxNRFD4zk73BLnTTVgRtG6QPPhRcaK0oKqIoUpAiivoLfPVBxPrkS1/8D+ICSt/7oqK0JW0txb1p4pLaLDOZmTQzyWSWez13khkq1Q8O99xzz3fWy1FKQUyOT/CA4PXcS9fCwOmpG1T58g2AWZhUPl/Fg4LroixeojVRgtJaOu9zPLjR5JXzdGN25CnTuc03R7LRsN5vSiqU5VCvG1BZuEzF2dNuUD8Lk8LC2GRp+Zz74AlXTB7/GOnoGxb4CJBqHiz1J3DBBNi6DrUtuVEWgzh/hgp2FhzdwFJ6QN4sziRufZ/wQ60/T2ievjrdeXvpQZy4ZM/IpLg4PrL9zsTty4MgxJbyb49NNa8ufIfC3OhUuKULnVruN00uOOXTRRqKtgNHOKiX3gOxIsBBD9QrZdCUvMQbshQ2VAms8ipQ0wRHE4HYDmilnD5wda2L7x2bM6vF3D3WOzFtoJYFJrIHrqXiLIVbg2PaFyiybGcv8LFhNAaYuQHWSubFQS31ZHDaa23lYZvk6Tv2uR24hhQQ2tl99F1707QD/w1QmB+VY2397RwIsFVIW5SQeN+pRbP57IMTl0/EKaFX0OEsZjuE+r5gtDUWbunApiUgRgW4QB/U1ALUdbVGHfqbOuQD+r/Gc8atALOlQ/GO/ZHWHiB6Bki9jKNkE7Nx7g2hlgPUwXpiCTA0BWoVWcVgB/wWNl8dZpWkd+0e7AarBLaWBYpBCBIJjh5IAPjoICi5tEFtMjR0M5NlPP8r7DmZ1EjdmjUrKhIFnDBuPIBriQzg5lsxexDsWhWsivHVIzP89dlwn+OCEAZNVEHZ0Ezpx6/HUib1qLRRrupbAZyJA2a5mmi6N8Ba8GT92dD17fd/SfJuZHLhTjDUuFP4Ay497OsuHqG/AAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="10d597cb-9060-419c-9eb2-63b6c80d9ef8" ClassName="WishlistCategory" Namespace="Homepage.Wishlist" TableName="wishlist_category">
+      <Properties>
+        <Property Guid="b1261f09-2320-4759-b03c-319cc652b036" CodeName="Items" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="1c5303fb-6824-4bed-aabc-52325b18d5c1" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJMSURBVChThVK/ixNREP727W6SDUGsojkUtTkMggqnCVY2V+ofIFoJHlp6+B8I9koiphQs7ARrOxujBzlB9O7wBxbqkaDJukl2N5t9z5lJNnogOjDMm3kz3/tm5sEYA5IaondX7Ol0amzxABfxh9tmPB4byYl+vBKHUywOpGlKRophkR4iXWKHgi/Z1uI4Nr1eb1YS7dwyevQdzokWlFKcgBrfJEnyG9SyrNpwOGyTBQURRRG01qhUKsdUvLPmdZ6sXnc+XoMbbaJYLKJUKqFQKHDyJ+EZdi6a4HnVxLvPBHoymRhC2fPEGXLa9P6MxVyon2GWsEI+z+FP2aA7LU8QbDoajQxrv98X6GazeZeSFE/CSvxNrQtVYU7JQpTFcZy6Gr65fD79eh/myz24dopcLgcaLHzflyTl6PCm8pahfxJHy+Uq5PN5eJ43S0gmwYPk2yPogFqmJuakF2MVDkRKi0fCCZm4rltXFDDU73gek+q5clEqFfOqFZregFvmNv+mPN1Go8HtHyVl8MWTTEW2HIah4f/AljUIAjMYDEy32xUQ/lq0eNNqtQQo2wQDnA2319tIR3CXmwwq4ERflIplxjxrPpfLZZmzFW1fbVmmsGaUB5U7CJOG0H6HcD7D3r8Kt3pnAcTFbNnnZQkAO/7GhZN513qt9tWBJESy+xS5U4+hSseFCQvnMUB25n3Jpjlgm+D01tb7h/bSDagj67DLl2ixbyUxK2SbbSDbIcueGVBvLzgmN/8XTQzOCQALYRwmc4B0z5//h6QAur8Ad9zAlumJFKgAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="51a7611d-b9e0-46c2-845e-6fc077692c05" ClassName="Frontpage" Namespace="Homepage" TableName="frontpage">
+      <Properties>
+        <Property Guid="987ddc5e-1e50-49ef-8408-5454317732c0" CodeName="PageTitle" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="a24cf7b4-3b2d-40c0-8b4b-d129edd68198" Key="Value" Name="page_title" />
+          </DataValues>
+        </Property>
+        <Property Guid="5a2ab9a0-0586-4e27-87ad-d510580fde69" CodeName="Headline" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="321ce609-5321-43b0-90bf-53a6f015dee1" Key="Value" Name="headline" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOLSURBVChTTVJtbFNVGH7uFy3rWrrS0mVubvzYFqaiG4tbwS2ZYBxNDOCIJgY/IMovg0bjD0mM8Qc//YiJwcToyMQEx/yBEzoGkyq123RAqSDCNrp2bmvHuq63X/fj3Hs9twTjk7w5yXPe5+R5n/dwhmEg80xC4lZ3xYuMfNiKI6GDXSbLfDN30Tg/eQkMZZ7qfnT/5dR8I4TKUTDm9Ue/HDUW0i+j3X0aMAnaFaP1Y1mbyAWNm2tunIvkMJf8UGM+uP6uEY+9hg3uOA7Wa+CdGQ5pOQctNYTXz10Llh9967dDoaOtb+64JzFIZK1YESWsyecxEZ9wmjYS7Q9vr/PYfAhMqbA4Cf52fgWnsg5vWH1gpaIccREBk/M3kFplMDO7AcpwH6xTHtyZn7nvu/eLp+20cfWVzvd5MDZoWhBfjp4JXjkW6Sk3mKA+Bunhp1UwdOPVz7v6R0ze9CC0ux9ROj29uCmqyBUEWMkahmOfRgf2Dj3OmgqXdwtmkabjVeCPuIw7ahZvdx7Y6j++cw8TXRk2LujL2I5t6B8nYFoGsUgyaP3HgeCV8BJr42yILeVwfKyEdFLBxqIPrqgfqeQSSkWpio0mb4Av5KHrOriqGkTGqyGJFmyprYdG9AkOXULb3oYnmku8HYa6HkIpDQc5AYMKvj/y02b21Itn9nw2cjJQz8WwzbmIvo48fp//Swtcn6guj/m/HHh6nKC1/7m6XZaq9R6IRRuKCkA0CQQpjC0FiEa0C4RoL3y9+1Te1D1Y5ndtG5te6n7IBwkWGJoDiqLilihA4CxYyBhQVQJOFrHZnUdCHMOvM5HA0IGzfjPoH56t6Xjea6/DNE/AGtVoIFaEFnjohMd0Kg/GmkFFzV2w1iQNQ0Jb3gtGKtFYz46ai+htdjUhkJ5CeCWMbKmIuwUVkdsFxMUUGpvuQa5dxlV1Fn+KScTmYpicjqKltgXFnNTFE1XL5GSxwk5YWPheJBd5XLwFrLM7kRFZxIJpSCsW8HoVKjexcNpmUcFcQya/BllSRLZUkA59Ev6W7NzUhuW5QSo6Da9bhJHP0PQ42B1u2CpZeBoX4fZegpANwf9kD94b+NhM/51yiH0DfruqaCFfbcvWntZu3F52IR4XQBiBhkenlNKoaxxHs6MBP18NYyQ6OU3F3fQ7J/9b4wPsONaxj67qsKbpj+ka9X0fWVp0MPRT0ckyUwbwL8sQ1XrFUS3JAAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>61f74ef7-9ce5-45b0-8cc9-b5ba42298e64</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( Homepage.Frontpage ( PageTitle Headline Background BackgroundPosition BackgroundColor NavigationCssBackgroundColor NavigationCssColor FontAwesomeClass ) Homepage.PageWithBackground ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="498c36aa-3a20-4370-9329-406c600164cb" ClassName="NavbarItem" Namespace="Homepage" TableName="navbar_item">
+      <Properties>
+        <Property Guid="f7865ef8-57a9-4ac6-bd53-160f11aab337" CodeName="LinkItem" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="fda1197a-e8f7-4abe-9c17-1047d01f0b3a" Key="Value" Name="link_item" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="51a7611d-b9e0-46c2-845e-6fc077692c05" />
+                <ClassReference ClassGuid="8ae6c601-b29a-4569-8a00-f994f20abe43" />
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+                <ClassReference ClassGuid="61f74ef7-9ce5-45b0-8cc9-b5ba42298e64" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="99711d3d-92a5-48c4-99b8-6d3e33685701" CodeName="DisplayText" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="2a031bd5-d232-4ac2-a42d-fb00379b73dc" Key="Value" Name="display_text" />
+          </DataValues>
+        </Property>
+        <Property Guid="5c424ad5-595f-4c94-b50d-b2b912704773" CodeName="FontAwesomeClassString" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="42960f0e-2330-4ad6-b150-95504ed68cb9" Key="Value" Name="font_awesome_class_string" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKNSURBVChTjVJdSFNhGH53NqdjDJaMsOWKrSlsi5HTDS+KRrENgwXuxosxAw1MxLt5IWUQiWRCEngRRJE3XgTrfo3aFiq6VGgbM3+YLffDkqRim/rtnPP1nZMZWGM9cDgvL8/3vM/3fK8AYww8uKKzsxMfdQQul8tfY0/YhVxHLBbv6vX66ba2tv4jysziI/wDFeGPyiGEwWBQmkwmN1Op1GRLS8s9SqfTpSORyJl3aAqMRmM/P8/9VIefzz3A6hFY/UvjOHiC1+v9lslk5mUyWYdCoYBoNMp4PJ7M+Pj4IE+wWq0XmpqaZmsvx6RX9B4oszQc0AimQiM0P/P4Z7gv2Dl7G5a4uqoH6vBfEbzCwMDAEMnp4crKSrtcLp+RSCQn/H6/KhwOFymTyXSdEIZ9Ph/T3Ny8kM/nNbFYbMFsNmc4BYqm6dOEOVYqlVgSI5AIQeemOgqFAm9OQE4JtVrtplqtbrD1GuoQU4bs9234mI/CXDJAidbW1hhCVHPsl+8f431y/yIqAUv875Zw3T9zuDF9FZ8aBjFXV82hGqrmVA28g9bWVrFSqRy12WxDXV1dUCwWIZ1OQygU2kIIpbu7uy0ikag2l8vB8vIyBAKBiWw2e4fU6LeDUYvFMkhR1K2+vj5pT09PgcQLTqdT7XA4LsXj8dqJoBtPbwwCx+G43BnuIO+AbLyORP2KbFWDSqViybT68N4ksCRyRDarzDCgrNeCsfEiRD69hQ/bizj9TH4+EV9NVAzx5gsTvmbshdTXDX49abZMhMrEgRhOyhphNumHxa1ZVFHA9UTD7CNEHCDg3vacwkC1a+yw9Hke3qy/jiIaLNkxfPDfz6i5K9hhWKFij2Vqvoxh+lcX4Cf2am/8tDRY9gAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="61f74ef7-9ce5-45b0-8cc9-b5ba42298e64" ClassName="PageWithBackground" Namespace="Homepage" TableName="page_with_background">
+      <Properties>
+        <Property Guid="88c76738-8e64-47c7-9c02-b6179f3f73ba" CodeName="Background" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="86316d9d-6d8d-4bc5-827f-34464426e73a" Key="Filename" Name="background_filename" />
+            <ShortString Guid="57f1e7a6-de9f-4c32-978f-0633211510c7" Key="Type" Name="background_type_name" />
+            <ShortString Guid="8e7a87d7-343a-476e-b4c3-0acd16e292b5" Key="Extension" Name="background_extension" />
+            <Float Guid="b562a43d-8b8d-434e-ae0b-71219d797952" Key="Bytes" Name="background_bytes" />
+            <LongString Guid="f5c88852-0b7c-44e3-82a3-33a80e443340" Key="Info" Name="background_info" />
+            <Integer Guid="85fdcbdb-ca72-4928-ad63-6d3c70cedb52" Key="Reference" Name="background_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="9a2fd1a5-af97-4293-8cfe-3da1f00e494f" CodeName="BackgroundPosition" PropertyClassGuid="7d08c6fb-28f7-4d30-b407-439e018d2402">
+          <DataValues>
+            <Integer Guid="b9609d5f-d573-43c5-a864-2185973b200d" Key="Value" Name="background_position" />
+          </DataValues>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="5cc3fb68-45fb-422a-9383-28f641250ac7" />
+          </Settings>
+        </Property>
+        <Property Guid="f2f0dc6e-362e-40dd-bd75-d714603cfd61" CodeName="BackgroundColor" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="a14da10e-8427-4606-b4d1-ebcf5d7b0f85" Key="Value" Name="background_color" />
+          </DataValues>
+        </Property>
+        <Property Guid="08056b6d-5bf7-4ecc-894d-e170ef05d7f0" CodeName="NavigationCssBackgroundColor" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="56ec31f8-d3e7-429a-b579-25541bb9b010" Key="Value" Name="navigation_css_background_color" />
+          </DataValues>
+        </Property>
+        <Property Guid="c7a8829c-b44c-4825-8d1e-519d83148cd9" CodeName="NavigationCssColor" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="7509adfb-523c-4f4c-97d1-ab32a78354ef" Key="Value" Name="navigation_css_color" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+  </ContentClasses>
+  <Enumerations>
+    <Enumeration Guid="9c744cff-a7dc-4acf-b6a6-f1beaddcc7dc" CodeName="IngredientTypeEnumNOTUSED" Namespace="Homepage.Recipes">
+      <Values>
+        <Value Guid="94e8b75a-aa4f-41d1-ad44-281ab565bbc2" CodeName="Animalsk" />
+        <Value Guid="c7558f35-6802-4623-9a3c-341e56105d3c" CodeName="Gronnsak" Value="1" />
+        <Value Guid="6eb6c2a6-f8ee-47f2-b5eb-e1054ca71036" CodeName="Frukt" Value="2" />
+      </Values>
+    </Enumeration>
+    <Enumeration Guid="c93645d7-40c1-4d1a-84ab-d6be7b523cf5" CodeName="MeasuringUnitEnum" Namespace="Homepage.Recipes">
+      <Values>
+        <Value Guid="740f3ec0-13c1-4b34-b40e-092cb3b1bc2c" CodeName="Grams">
+          <Globalization>
+            <Lang LCID="1044" Name="Gram" />
+          </Globalization>
+        </Value>
+        <Value Guid="d6b248a9-e0f8-4deb-9c45-0a36b8607702" CodeName="Milligrams" Value="1">
+          <Globalization>
+            <Lang LCID="1044" Name="Milligram" />
+          </Globalization>
+        </Value>
+        <Value Guid="167ebe05-fbbe-4cf2-8cb4-ab568c85b629" CodeName="Kg" Value="2" />
+        <Value Guid="8c3def39-92f9-46b1-98ab-e6b017122779" CodeName="Ml" Value="3" />
+        <Value Guid="8e3dfe59-d4d6-4e69-a0d2-3021d092de6f" CodeName="Dl" Value="4" />
+        <Value Guid="b8e21cd1-64ba-4cb6-a03d-cf61ba939929" CodeName="Litres" Value="5">
+          <Globalization>
+            <Lang LCID="1044" Name="Liter" />
+          </Globalization>
+        </Value>
+        <Value Guid="fb73042d-8eb6-4542-b41f-10a605502348" CodeName="Cups" Value="6">
+          <Globalization>
+            <Lang LCID="1044" Name="Kopper" />
+          </Globalization>
+        </Value>
+        <Value Guid="e9268048-303c-4ba8-aebb-b44a6ebabcd8" CodeName="Pieces" Value="7">
+          <Globalization>
+            <Lang LCID="1044" Name="Stk" />
+          </Globalization>
+        </Value>
+      </Values>
+    </Enumeration>
+    <Enumeration Guid="501f6a25-4452-4ae8-ad77-edbb00233120" CodeName="FoodCategoriesEnumNOTUSED" Namespace="Homepage.Recipes">
+      <Values>
+        <Value Guid="cce98a52-34db-408d-9704-5cc3031cbb4b" CodeName="Dinner" />
+        <Value Guid="e926afa6-6444-484a-a3a3-501b3f6a9446" CodeName="Lunch" Value="1" />
+        <Value Guid="a564e9e9-ee74-4cf6-9351-b108352ed570" CodeName="Breakfast" Value="2" />
+        <Value Guid="4e9ef53c-6445-465b-8280-4b2ea311c0d0" CodeName="Dessert" Value="3" />
+        <Value Guid="c0cb4055-8736-4f01-8d05-48f3276690d7" CodeName="Vegetarian" Value="4" />
+        <Value Guid="210b1181-f8aa-4541-a988-4a68d6ed33e0" CodeName="Meat" Value="5" />
+        <Value Guid="b1308226-0a86-4b53-8e5e-e6321c99f939" CodeName="Snack" Value="6" />
+        <Value Guid="093cef7f-60d3-452d-a33b-c9c6f0bbab75" CodeName="Easy" Value="7" />
+        <Value Guid="2620b73e-db93-4dc5-b379-8c7ae507c9cd" CodeName="Quick" Value="8" />
+        <Value Guid="86991c4d-ee00-41fe-a36d-5eeacfbd135c" CodeName="Healthy" Value="9" />
+        <Value Guid="2e21c85d-0de6-4663-a6e4-ec566b84c191" CodeName="Soup" Value="10" />
+        <Value Guid="04ec037f-6cae-4a67-a8ed-80948590a24c" CodeName="Fancy" Value="11" />
+      </Values>
+    </Enumeration>
+    <Enumeration Guid="174223b0-5815-463e-8df5-dc11f25b23f9" CodeName="WhoWantsItEnum" Namespace="Homepage.Wishlist">
+      <Values>
+        <Value Guid="8887e912-7b37-44d5-9401-aa482e1966fb" CodeName="EvaMargrethe" />
+        <Value Guid="404e232e-8605-4223-8b5c-1edfe2779064" CodeName="Maja" Value="1" />
+        <Value Guid="e7ce10fc-4d3d-4e5e-90f6-8d514fcf02a9" CodeName="Begge" Value="2" />
+      </Values>
+    </Enumeration>
+    <Enumeration Guid="b104483f-a32c-44a3-8391-e8537b3cabac" CodeName="PriceRangeEnum" Namespace="Homepage.Wishlist">
+      <Values>
+        <Value Guid="4275eb50-6dd8-4900-a33a-e6a533af7244" CodeName="Billig" />
+        <Value Guid="d6deb2a4-154d-401c-8fc0-52fd394b647b" CodeName="MediumDyr" Value="1" />
+        <Value Guid="7c59da38-51be-41a1-b4c9-c7cca1a102c3" CodeName="Dyr" Value="2" />
+        <Value Guid="c8ad8150-c83c-441f-b79c-f179e6b1f607" CodeName="VeldigDyr" Value="3" />
+      </Values>
+    </Enumeration>
+    <Enumeration Guid="5cc3fb68-45fb-422a-9383-28f641250ac7" CodeName="BackgroundPositionEnum" Namespace="Homepage">
+      <Values>
+        <Value Guid="203c55fe-16ec-4887-9fd0-35f54c74f637" CodeName="Top" />
+        <Value Guid="331e6e62-a089-4898-86f0-a5449813c58b" CodeName="Center" Value="1" />
+        <Value Guid="a297cfa2-1aba-43c4-a308-b3ea5578a4db" CodeName="Bottom" Value="2" />
+      </Values>
+    </Enumeration>
+  </Enumerations>
+  <Relations>
+    <Relation Guid="e812c82d-537e-487e-8597-a1b9349b8cfd" ClassName="RelRecipeIngredientRecipe" Namespace="Homepage.Recipes" TableName="rel_rel_recipe_ingredient_recipe">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="41a9c903-ad97-4cd4-94d3-3ca2906bf268" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="8ae6c601-b29a-4569-8a00-f994f20abe43" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+    </Relation>
+    <Relation Guid="a03cfdc7-5015-4afa-87ba-25537c22d609" ClassName="RelIngredientIngredientRecipe" Namespace="Homepage.Recipes" TableName="rel_rel_ingredient_ingredient_recipe">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="41a9c903-ad97-4cd4-94d3-3ca2906bf268" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="11531980-2259-4b3c-b60d-797c08f0427d" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+    </Relation>
+    <Relation Guid="0bcfc86c-c827-4415-9ab6-dfeed2592540" ClassName="RelCategoryRecipe" Namespace="Homepage.Recipes" TableName="rel_rel_category_recipe">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="8ae6c601-b29a-4569-8a00-f994f20abe43" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="89fe13b8-e167-40ce-b74a-cf7e674f0e7b" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+      <RelationType>ManyToMany</RelationType>
+    </Relation>
+    <Relation Guid="1c5303fb-6824-4bed-aabc-52325b18d5c1" ClassName="RelWishlistItemCategory" Namespace="Homepage.Wishlist" TableName="rel_rel_wishlist_item_category">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="f5d76663-c64d-4eca-9b33-1d582397bd1d" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="10d597cb-9060-419c-9eb2-63b6c80d9ef8" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+    </Relation>
+  </Relations>
+  <Scripts>
+    <InternalScript Guid="87d3d975-d4ea-4cc8-8477-07153378bc4c" RunDuringSave="True" Active="True" Id="webnodes.CodeGeneration" />
+  </Scripts>
+  <Options>
+    <OData>
+      <Settings>
+        <Boolean Key="ODataExposeAllProperties" />
+        <Boolean Key="ODataExposeAllTypes" />
+        <Boolean Key="ODataEnabled" />
+      </Settings>
+    </OData>
+  </Options>
+</Definition>
