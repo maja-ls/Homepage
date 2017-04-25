@@ -10,23 +10,13 @@ using WAF.Engine.Query.Advanced;
 using WAF.Engine.Property;
 using WAF.Data;
 using WAF.Data.Query;
-using WAF.Data.Query.Homepage;
+using WAF.Data.Query.Homepage.Site;
 using WAF.Data.Content;
 using WAF.Data.DataValue;
 
-namespace WAF.Engine.Content.Homepage {
+namespace WAF.Engine.Content.Homepage.Site {
 
-    public partial class Ingredient {
-
-        public override void OnInit() {
-
-            base.OnInit();
-        }
-
-        public override void OnNew() {
-
-            base.OnNew();
-        }
+    public partial class NavbarItem {
 
         public override void OnBeforeInsert() {
 
@@ -46,11 +36,6 @@ namespace WAF.Engine.Content.Homepage {
         public override void OnAfterUpdate() {
 
              base.OnAfterUpdate();
-        }
-
-        public override void OnAfterDelete(bool permanently) {
-
-             base.OnAfterDelete(permanently);
         }
 
     }

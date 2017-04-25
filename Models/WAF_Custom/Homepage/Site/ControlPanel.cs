@@ -10,13 +10,13 @@ using WAF.Engine.Query.Advanced;
 using WAF.Engine.Property;
 using WAF.Data;
 using WAF.Data.Query;
-using WAF.Data.Query.Homepage;
+using WAF.Data.Query.Homepage.Site;
 using WAF.Data.Content;
 using WAF.Data.DataValue;
 
-namespace WAF.Engine.Content.Homepage {
+namespace WAF.Engine.Content.Homepage.Site {
 
-    public partial class Frontpage {
+    public partial class ControlPanel {
 
         public override void OnInit() {
 

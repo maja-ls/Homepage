@@ -124,7 +124,7 @@
       <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVChTdVJLSxtRFP7uOKhpKVbU8RH6GhdSCZhCQNvQRbpw4cKV7vsL+j8Kha67atfiiyqREgw1JqCIadBojImJBjWNKbZUHROTzO25V2caKf3gzNw5j+98c+7B1tYWJ4CJx8cdcMRisWtPrVbjEIhGo3xlZSUnHHaugGmafHp6WsfGxgZfX1+XURnc39/n388qfHl5WToZHYzInRcOxhS48n7ItPn5eSOZTMoMyZHL5bgoFZ3W1tZkwDKlXC5fOp1ONLU58SGh4KvqkQqCwaCUY8taXFw0fD6f420MaFVreNWcxebmpm5TWTY1NWVMTEw8sb5ZPB4XvXFjmsfjKUpKC0KYGId4C7HhcLijnlERSdVq9YqAFHOip6fnhAR2yGoCKxaLvKWlBe/jKlqbGPR7Jh6W9pBKpbSRkZEii0Qi3t7e3vCp2oZQQUUDAx7dNfHA2EUikdBkH/pF79HREd/+UeHvvnF+dlnmCwsLFKIRWGL8fr9XiBRi6SyDtxKEzczMDNUHhTGaFu/v77/R/Bf5fB6FQgGVSkUbHBy8PZs6KGKAArRMUBSF0XJEDcNAZ2cn3G43urq6Tmil+NLSkj2aeogCLhIFhCTqiDOzEZ92Gco1hueaCZ8TyGazODw8BC2HNjw8bCtiq6urL2k7vui67mhvb8f2qYnZAxUdzUBjA90kzeFXGXjWdk2UTqfF1qJUKmmjo6NFe5tCoZCXzoG+vj6HpmlI/jTx+UDB/WYFKt3N7ytSWC3hjbsRmb00MpkMLi4uHtsEFgKBgJcUBVwul6O7uxs7RBQ6VvD6KZDLXBeen5/rY2NjWZH/D4GFubm5IYoFBwYGHCTX6mgXWvgvgYXJyUlBdDw+Pp67cdUB+ANhr+pPU9YePwAAAABJRU5ErkJggg==</Icon>
       <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
     </ContentClass>
-    <ContentClass Guid="f57f49ad-2aff-40dc-ac86-84af80518c9d" ClassName="ControlPanel" Namespace="Homepage" TableName="control_panel">
+    <ContentClass Guid="f57f49ad-2aff-40dc-ac86-84af80518c9d" ClassName="ControlPanel" Namespace="Homepage.Site" TableName="control_panel">
       <Properties>
         <Property Guid="68e26076-a0da-4015-8488-165b2b118e35" CodeName="SiteLogo" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
           <DataValues>
@@ -248,6 +248,7 @@
           </DataValues>
           <Settings>
             <EnumerationReference Key="Enumeration" Value="174223b0-5815-463e-8df5-dc11f25b23f9" />
+            <Enumeration Key="ControlType" Value="RadioButtonList" />
           </Settings>
         </Property>
         <Property Guid="46b4a203-3143-46c1-9c25-c415cab12744" CodeName="Description" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
@@ -266,6 +267,7 @@
           </DataValues>
           <Settings>
             <EnumerationReference Key="Enumeration" Value="b104483f-a32c-44a3-8391-e8537b3cabac" />
+            <Enumeration Key="ControlType" Value="RadioButtonList" />
           </Settings>
         </Property>
       </Properties>
@@ -283,7 +285,7 @@
       <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJMSURBVChThVK/ixNREP727W6SDUGsojkUtTkMggqnCVY2V+ofIFoJHlp6+B8I9koiphQs7ARrOxujBzlB9O7wBxbqkaDJukl2N5t9z5lJNnogOjDMm3kz3/tm5sEYA5IaondX7Ol0amzxABfxh9tmPB4byYl+vBKHUywOpGlKRophkR4iXWKHgi/Z1uI4Nr1eb1YS7dwyevQdzokWlFKcgBrfJEnyG9SyrNpwOGyTBQURRRG01qhUKsdUvLPmdZ6sXnc+XoMbbaJYLKJUKqFQKHDyJ+EZdi6a4HnVxLvPBHoymRhC2fPEGXLa9P6MxVyon2GWsEI+z+FP2aA7LU8QbDoajQxrv98X6GazeZeSFE/CSvxNrQtVYU7JQpTFcZy6Gr65fD79eh/myz24dopcLgcaLHzflyTl6PCm8pahfxJHy+Uq5PN5eJ43S0gmwYPk2yPogFqmJuakF2MVDkRKi0fCCZm4rltXFDDU73gek+q5clEqFfOqFZregFvmNv+mPN1Go8HtHyVl8MWTTEW2HIah4f/AljUIAjMYDEy32xUQ/lq0eNNqtQQo2wQDnA2319tIR3CXmwwq4ERflIplxjxrPpfLZZmzFW1fbVmmsGaUB5U7CJOG0H6HcD7D3r8Kt3pnAcTFbNnnZQkAO/7GhZN513qt9tWBJESy+xS5U4+hSseFCQvnMUB25n3Jpjlgm+D01tb7h/bSDagj67DLl2ixbyUxK2SbbSDbIcueGVBvLzgmN/8XTQzOCQALYRwmc4B0z5//h6QAur8Ad9zAlumJFKgAAAAASUVORK5CYII=</Icon>
       <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
     </ContentClass>
-    <ContentClass Guid="51a7611d-b9e0-46c2-845e-6fc077692c05" ClassName="Frontpage" Namespace="Homepage" TableName="frontpage">
+    <ContentClass Guid="51a7611d-b9e0-46c2-845e-6fc077692c05" ClassName="Frontpage" Namespace="Homepage.Site" TableName="frontpage">
       <Properties>
         <Property Guid="987ddc5e-1e50-49ef-8408-5454317732c0" CodeName="PageTitle" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
           <DataValues>
@@ -300,7 +302,7 @@
       <InheritGuid>61f74ef7-9ce5-45b0-8cc9-b5ba42298e64</InheritGuid>
       <PropertyPositions>Commands ( ) Name ( Name ) Main ( Homepage.Frontpage ( PageTitle Headline Background BackgroundPosition BackgroundColor NavigationCssBackgroundColor NavigationCssColor FontAwesomeClass ) Homepage.PageWithBackground ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
     </ContentClass>
-    <ContentClass Guid="498c36aa-3a20-4370-9329-406c600164cb" ClassName="NavbarItem" Namespace="Homepage" TableName="navbar_item">
+    <ContentClass Guid="498c36aa-3a20-4370-9329-406c600164cb" ClassName="NavbarItem" Namespace="Homepage.Site" TableName="navbar_item">
       <Properties>
         <Property Guid="f7865ef8-57a9-4ac6-bd53-160f11aab337" CodeName="LinkItem" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
           <DataValues>
@@ -332,7 +334,7 @@
       <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKNSURBVChTjVJdSFNhGH53NqdjDJaMsOWKrSlsi5HTDS+KRrENgwXuxosxAw1MxLt5IWUQiWRCEngRRJE3XgTrfo3aFiq6VGgbM3+YLffDkqRim/rtnPP1nZMZWGM9cDgvL8/3vM/3fK8AYww8uKKzsxMfdQQul8tfY0/YhVxHLBbv6vX66ba2tv4jysziI/wDFeGPyiGEwWBQmkwmN1Op1GRLS8s9SqfTpSORyJl3aAqMRmM/P8/9VIefzz3A6hFY/UvjOHiC1+v9lslk5mUyWYdCoYBoNMp4PJ7M+Pj4IE+wWq0XmpqaZmsvx6RX9B4oszQc0AimQiM0P/P4Z7gv2Dl7G5a4uqoH6vBfEbzCwMDAEMnp4crKSrtcLp+RSCQn/H6/KhwOFymTyXSdEIZ9Ph/T3Ny8kM/nNbFYbMFsNmc4BYqm6dOEOVYqlVgSI5AIQeemOgqFAm9OQE4JtVrtplqtbrD1GuoQU4bs9234mI/CXDJAidbW1hhCVHPsl+8f431y/yIqAUv875Zw3T9zuDF9FZ8aBjFXV82hGqrmVA28g9bWVrFSqRy12WxDXV1dUCwWIZ1OQygU2kIIpbu7uy0ikag2l8vB8vIyBAKBiWw2e4fU6LeDUYvFMkhR1K2+vj5pT09PgcQLTqdT7XA4LsXj8dqJoBtPbwwCx+G43BnuIO+AbLyORP2KbFWDSqViybT68N4ksCRyRDarzDCgrNeCsfEiRD69hQ/bizj9TH4+EV9NVAzx5gsTvmbshdTXDX49abZMhMrEgRhOyhphNumHxa1ZVFHA9UTD7CNEHCDg3vacwkC1a+yw9Hke3qy/jiIaLNkxfPDfz6i5K9hhWKFij2Vqvoxh+lcX4Cf2am/8tDRY9gAAAABJRU5ErkJggg==</Icon>
       <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
     </ContentClass>
-    <ContentClass Guid="61f74ef7-9ce5-45b0-8cc9-b5ba42298e64" ClassName="PageWithBackground" Namespace="Homepage" TableName="page_with_background">
+    <ContentClass Guid="61f74ef7-9ce5-45b0-8cc9-b5ba42298e64" ClassName="PageWithBackground" Namespace="Homepage.Site" TableName="page_with_background">
       <Properties>
         <Property Guid="88c76738-8e64-47c7-9c02-b6179f3f73ba" CodeName="Background" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
           <DataValues>
@@ -350,6 +352,7 @@
           </DataValues>
           <Settings>
             <EnumerationReference Key="Enumeration" Value="5cc3fb68-45fb-422a-9383-28f641250ac7" />
+            <Enumeration Key="ControlType" Value="RadioButtonList" />
           </Settings>
         </Property>
         <Property Guid="f2f0dc6e-362e-40dd-bd75-d714603cfd61" CodeName="BackgroundColor" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
