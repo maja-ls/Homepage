@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WAF.Engine.Content.Homepage;
+using WAF.Engine.Content.Homepage.Site;
 using WAF.Engine.Content.Native;
 using WAF.Engine.Property;
-using WAF.Engine.Query.Homepage;
+using WAF.Engine.Query.Homepage.Site;
 using WAF.Presentation.Web;
 
 namespace Homepage.Helpers {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WAF.Engine.Content.Homepage;
+using WAF.Engine.Content.Homepage.Site;
 using WAF.Presentation.Web;
 
 namespace Homepage.Controllers

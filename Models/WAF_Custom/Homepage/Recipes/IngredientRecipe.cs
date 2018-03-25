@@ -36,8 +36,12 @@ namespace WAF.Engine.Content.Homepage.Recipes {
         public override void OnBeforeUpdate() {
 
             var n = "";
-            if (this.Recipe.IsSet()) n += this.Recipe.Get().Name + " - ";
-            if (this.Ingredient.IsSet()) n += this.Ingredient.Get().Name;
+            if (this.Recipe.IsSet())
+                n += this.Recipe.Get().Name + " - ";
+            if (this.Ingredient.IsSet())
+                n += this.Ingredient.Get().Name;
+            if (string.IsNullOrEmpty(n))
+                n = "Empty";
             this.Name = n;
             base.OnBeforeUpdate();
         }
